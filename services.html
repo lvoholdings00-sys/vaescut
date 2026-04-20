@@ -3,163 +3,115 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services — KezdaBarber · Katy, TX</title>
+  <title>Services — Vaescutz Houston Barbershop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--black:#060810;--ink:#0c0e1a;--charcoal:#111525;--blue:#2139ad;--blue-lt:#2f4fd4;--blue-dk:#162888;--blue-glow:rgba(33,57,173,.35);--gold:#d4a843;--gold-lt:#f0c060;--white:#f2f2f6;--chrome:#c8cce8;--chrome-lt:#e8eaf8;--chrome-dk:#8890b8;--gray:#5a6080;--gray-lt:#9298b8;}
+    :root{--black:#080808;--ink:#0e0e0e;--charcoal:#161616;--chrome:#c8c8c8;--chrome-lt:#e8e8e8;--chrome-dk:#888;--gold:#d4a843;--gold-lt:#f0c060;--white:#f2f2f2;--gray:#666;--gray-lt:#999}
     html{scroll-behavior:smooth}
     body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
     a{text-decoration:none;transition:all .2s}
     body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.55}
-
-    .ticker-wrap{background:var(--blue);overflow:hidden;white-space:nowrap;padding:.38rem 0;position:relative;z-index:10}
-    .ticker-track{display:inline-block;animation:ticker 28s linear infinite}
-    .ticker-track span{font-family:'Oswald',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin:0 2.5rem}
+    .ticker-wrap{background:var(--gold);overflow:hidden;white-space:nowrap;padding:.38rem 0;position:relative;z-index:10}
+    .ticker-track{display:inline-block;animation:ticker 25s linear infinite}
+    .ticker-track span{font-family:'Oswald',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--black);margin:0 2.5rem}
     .ticker-track span::before{content:'✦  '}
     @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-    header{position:sticky;top:0;z-index:100;background:rgba(6,8,16,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(33,57,173,.25)}
+    header{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(200,200,200,.1)}
     .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;max-width:1200px;margin:0 auto}
     .logo-wrap{display:flex;align-items:baseline;gap:.3rem}
-    .logo-k{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);letter-spacing:.04em;line-height:1;filter:drop-shadow(0 0 8px rgba(212,168,67,.5))}
+    .logo-v{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);letter-spacing:.04em;line-height:1;filter:drop-shadow(0 0 6px rgba(212,168,67,.4))}
     .logo-rest{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--chrome-lt);letter-spacing:.04em;line-height:1}
-    .logo-tag{font-family:'Oswald',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);margin-left:.5rem;align-self:center}
+    .logo-tag{font-family:'Oswald',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);margin-left:.4rem;align-self:center}
     nav ul{display:flex;list-style:none;gap:.2rem;align-items:center}
-    nav ul a{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--chrome-dk);padding:.4rem .85rem;border-radius:3px;transition:color .2s}
+    nav ul a{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--chrome-dk);padding:.4rem .85rem;border-radius:3px}
     nav ul a:hover,nav ul a.active{color:var(--gold)}
-    .nav-book{background:var(--blue)!important;color:#fff!important;font-weight:700!important;border-radius:3px!important}
-    .nav-book:hover{background:var(--blue-lt)!important}
+    .nav-book{background:var(--gold)!important;color:var(--black)!important;font-weight:700!important;border-radius:3px!important}
+    .nav-book:hover{background:var(--gold-lt)!important}
     .menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:.4rem}
     .menu-toggle span{display:block;width:22px;height:2px;background:var(--chrome);border-radius:2px}
 
-    .page-hero{position:relative;background:linear-gradient(108deg,#060810 0%,#0c0e1a 60%,#0f1230 100%);padding:5rem 2rem 4rem;text-align:center;z-index:1;overflow:hidden}
-    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 60%,rgba(33,57,173,.1) 0%,transparent 65%)}
-    .page-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent,transparent 38px,rgba(33,57,173,.03) 38px,rgba(33,57,173,.03) 40px)}
+    /* PAGE HERO */
+    .page-hero{position:relative;background:linear-gradient(108deg,#080808 0%,#0e0e0e 60%,#0a0a0a 100%);padding:5rem 2rem 4rem;text-align:center;z-index:1;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 60%,rgba(212,168,67,.07) 0%,transparent 65%)}
+    .page-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent,transparent 38px,rgba(255,255,255,.01) 38px,rgba(255,255,255,.01) 40px)}
     .breadcrumb{font-family:'Oswald',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,242,242,.3);margin-bottom:1rem;position:relative;z-index:1}
-    .breadcrumb a{color:var(--blue-lt)}
+    .breadcrumb a{color:var(--gold)}
     .page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,10vw,7rem);color:var(--chrome-lt);margin-bottom:.4rem;position:relative;z-index:1;letter-spacing:.03em}
     .page-hero h1 span{color:var(--gold)}
     .page-hero p{font-size:.97rem;color:var(--gray-lt);max-width:420px;margin:0 auto;position:relative;z-index:1}
 
+    /* MAIN */
     .services-page{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:4rem 2rem 5rem}
     .btn{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:.85rem 1.9rem;border-radius:3px;transition:all .22s;display:inline-block;cursor:pointer;border:none}
     .btn-gold{background:var(--gold);color:var(--black)}
     .btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,168,67,.25);color:var(--black)}
-    .btn-blue{background:var(--blue);color:#fff}
-    .btn-blue:hover{background:var(--blue-lt);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow);color:#fff}
+    .btn-outline{background:transparent;color:var(--chrome);border:1.5px solid rgba(200,200,200,.22)}
+    .btn-outline:hover{border-color:var(--chrome-lt);color:var(--white);transform:translateY(-2px)}
 
-    .service-block{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:5rem;padding-bottom:5rem;border-bottom:1px solid rgba(33,57,173,.12)}
+    /* SERVICE BLOCKS */
+    .service-block{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:5rem;padding-bottom:5rem;border-bottom:1px solid rgba(200,200,200,.07)}
     .service-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
     .service-block.flip{direction:rtl}
     .service-block.flip>*{direction:ltr}
-    .svc-eyebrow{font-family:'Oswald',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--blue-lt);margin-bottom:.4rem;display:flex;align-items:center;gap:.6rem}
-    .svc-eyebrow::before{content:'';width:20px;height:1px;background:var(--blue-lt)}
+    .svc-eyebrow{font-family:'Oswald',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;display:flex;align-items:center;gap:.6rem}
+    .svc-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold)}
     .svc-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);color:var(--chrome-lt);letter-spacing:.03em;margin-bottom:.75rem}
     .svc-h2 span{color:var(--gold)}
     .svc-p{color:var(--gray-lt);font-size:.92rem;line-height:1.75;margin-bottom:.85rem}
     .svc-includes{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-top:1.25rem}
     .svc-includes li{display:flex;gap:.75rem;align-items:flex-start;font-size:.88rem;color:var(--chrome-dk)}
-    .svc-includes li::before{content:'—';color:var(--blue-lt);font-weight:700;flex-shrink:0;font-family:'Oswald',sans-serif}
-    .svc-cta{margin-top:2rem;display:inline-flex;align-items:center;gap:.5rem;background:var(--blue);color:#fff;font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:700;padding:.8rem 1.7rem;border-radius:3px;text-transform:uppercase;letter-spacing:.12em;transition:all .25s}
-    .svc-cta:hover{background:var(--blue-lt);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+    .svc-includes li::before{content:'—';color:var(--gold);font-weight:700;flex-shrink:0;font-family:'Oswald',sans-serif}
+    .svc-cta{margin-top:2rem;display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--black);font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:700;padding:.8rem 1.7rem;border-radius:3px;text-transform:uppercase;letter-spacing:.12em;transition:all .25s}
+    .svc-cta:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,168,67,.2)}
 
+    /* PHOTO GRID */
     .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
     .photo-grid.three{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px}
     .photo-grid.three .photo-main{grid-column:span 2}
-    .photo-slot{border-radius:6px;overflow:hidden;position:relative;background:var(--charcoal);border:1px dashed rgba(33,57,173,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;min-height:180px;transition:border-color .3s}
-    .photo-slot:hover{border-color:rgba(33,57,173,.45)}
+    .photo-slot{border-radius:6px;overflow:hidden;position:relative;background:var(--charcoal);border:1px dashed rgba(200,200,200,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;min-height:180px;transition:border-color .3s}
+    .photo-slot:hover{border-color:rgba(212,168,67,.3)}
     .photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px}
-    .ps-icon{font-size:1.8rem;opacity:.18}
+    .ps-icon{font-size:1.8rem;opacity:.2}
     .ps-label{font-family:'Oswald',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.18);text-align:center;padding:0 1rem}
-    .ps-tag{position:absolute;bottom:.5rem;left:.5rem;background:rgba(0,0,0,.85);color:var(--gold);font-family:'Oswald',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .5rem;border-radius:2px;border-left:2px solid var(--blue)}
+    .ps-tag{position:absolute;bottom:.5rem;left:.5rem;background:rgba(0,0,0,.8);color:var(--gold);font-family:'Oswald',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .5rem;border-radius:2px;border-left:2px solid var(--gold)}
 
-    /* BOOKING MENU */
-    .booking-section{background:var(--charcoal);border-radius:10px;padding:3rem;margin:4rem 0;border:1px solid rgba(33,57,173,.2)}
-    .booking-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--chrome-lt);letter-spacing:.03em;margin-bottom:.3rem}
-    .booking-section h2 span{color:var(--gold)}
-    .booking-section>.intro{color:var(--gray-lt);font-size:.88rem;margin-bottom:.6rem;line-height:1.6}
-    .cancel-notice{display:inline-flex;align-items:center;gap:.5rem;background:rgba(212,168,67,.08);border:1px solid rgba(212,168,67,.25);border-radius:4px;padding:.4rem .85rem;font-family:'Oswald',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
-    .booking-list{display:flex;flex-direction:column;gap:1px;background:rgba(33,57,173,.15);border-radius:8px;overflow:hidden}
-    .booking-row{background:var(--ink);display:grid;grid-template-columns:1fr auto auto auto;gap:1.5rem;align-items:center;padding:1.4rem 1.75rem;transition:background .25s;position:relative}
-    .booking-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue);transform:scaleY(0);transform-origin:center;transition:transform .3s}
-    .booking-row:hover{background:#101428}
-    .booking-row:hover::before{transform:scaleY(1)}
-    .bk-info{}
-    .bk-name{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--chrome-lt);margin-bottom:.2rem}
-    .bk-sub{font-size:.78rem;color:var(--gray);line-height:1.5}
-    .bk-sub .cancel-tag{color:rgba(212,168,67,.7);font-weight:600}
-    .bk-duration{font-family:'Oswald',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);white-space:nowrap;text-align:center}
-    .bk-duration strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--chrome-dk);letter-spacing:.04em}
-    .bk-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);letter-spacing:.03em;white-space:nowrap;text-align:right}
-    .bk-price span{font-family:'Oswald',sans-serif;font-size:.6rem;font-weight:400;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;display:block;text-align:right;margin-top:-.15rem}
-    .bk-btns{position:relative;min-width:110px}
-    .bk-btn-book{display:flex;align-items:center;justify-content:center;gap:.45rem;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.62rem 1.2rem;border-radius:4px;border:none;cursor:pointer;transition:all .22s;background:var(--blue);color:#fff;width:100%}
-    .bk-btn-book:hover{background:var(--blue-lt);transform:translateY(-1px);box-shadow:0 4px 18px var(--blue-glow)}
-    .bk-btn-book .chev{font-size:.55rem;transition:transform .2s;display:inline-block}
-    .bk-btn-book.active .chev{transform:rotate(180deg)}
-    .bk-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#1a1e38;border:1px solid rgba(33,57,173,.4);border-radius:6px;overflow:hidden;min-width:165px;z-index:50;box-shadow:0 10px 32px rgba(0,0,0,.65)}
-    .bk-dropdown.open{display:block;animation:ddIn .15s ease}
-    @keyframes ddIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-    .bk-dropdown a{display:flex;align-items:center;gap:.65rem;padding:.8rem 1rem;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--chrome-lt);transition:background .18s;text-decoration:none;border-bottom:1px solid rgba(33,57,173,.2)}
-    .bk-dropdown a:last-child{border-bottom:none}
-    .bk-dropdown .dd-paypal:hover{background:rgba(0,48,135,.4)}
-    .bk-dropdown .dd-stripe:hover{background:rgba(99,91,255,.25)}
-    .dd-logo{font-size:1rem}
-    /* PAYMENT MODAL */
-    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:999;align-items:center;justify-content:center;padding:1.5rem}
-    .modal-overlay.open{display:flex}
-    .modal{background:var(--charcoal);border:1px solid rgba(33,57,173,.35);border-radius:12px;padding:2.5rem;max-width:480px;width:100%;position:relative;border-top:3px solid var(--blue)}
-    .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--gray);font-size:1.2rem;cursor:pointer;transition:color .2s;line-height:1}
-    .modal-close:hover{color:var(--white)}
-    .modal h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--chrome-lt);letter-spacing:.03em;margin-bottom:.15rem}
-    .modal-service{font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-lt);margin-bottom:1.5rem}
-    .modal-amount{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--gold);letter-spacing:.02em;line-height:1;margin-bottom:.25rem}
-    .modal-note{font-size:.8rem;color:var(--gray);margin-bottom:2rem;line-height:1.6}
-    .modal-note strong{color:rgba(212,168,67,.8)}
-    .pay-btns{display:flex;flex-direction:column;gap:.75rem}
-    .pay-btn-full{display:flex;align-items:center;justify-content:center;gap:.6rem;font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.9rem 1.5rem;border-radius:6px;border:none;cursor:pointer;transition:all .25s;text-decoration:none;width:100%}
-    .pay-btn-paypal{background:#003087;color:#fff}
-    .pay-btn-paypal:hover{background:#0040b0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,48,135,.4)}
-    .pay-btn-stripe{background:#635bff;color:#fff}
-    .pay-btn-stripe:hover{background:#7a74ff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(99,91,255,.4)}
-    .pay-divider{display:flex;align-items:center;gap:.75rem;margin:.25rem 0}
-    .pay-divider::before,.pay-divider::after{content:'';flex:1;height:1px;background:rgba(200,200,200,.1)}
-    .pay-divider span{font-family:'Oswald',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
-    .pay-security{display:flex;align-items:center;justify-content:center;gap:.4rem;font-size:.72rem;color:var(--gray);margin-top:1rem}
-    @media(max-width:768px){
-      .booking-row{grid-template-columns:1fr auto;gap:1rem}
-      .bk-duration{display:none}
-      .bk-dropdown{right:auto;left:0}
-    }
+    /* PRICING TABLE */
+    .pricing-section{background:var(--charcoal);border-radius:10px;padding:3rem;margin:4rem 0;border:1px solid rgba(200,200,200,.07)}
+    .pricing-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--chrome-lt);letter-spacing:.03em;margin-bottom:.35rem}
+    .pricing-section h2 span{color:var(--gold)}
+    .pricing-section>p{color:var(--gray-lt);font-size:.88rem;margin-bottom:2rem}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,200,200,.07);border-radius:6px;overflow:hidden}
+    .price-item{background:var(--ink);padding:1.5rem;transition:background .25s}
+    .price-item:hover{background:#141414}
+    .price-name{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--chrome-lt);margin-bottom:.2rem}
+    .price-desc{font-size:.78rem;color:var(--gray);margin-bottom:.85rem;line-height:1.5}
+    .price-tag{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gold);letter-spacing:.04em}
+    .price-tag span{font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:400;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;margin-left:.2rem}
 
-    .book-strip{background:var(--blue);padding:3.5rem 2rem;text-align:center;position:relative;z-index:1}
-    .book-strip h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;letter-spacing:.03em;margin-bottom:.5rem}
-    .book-strip h2 span{color:var(--gold)}
-    .book-strip p{color:rgba(255,255,255,.7);font-size:.97rem;max-width:420px;margin:0 auto 1.75rem;line-height:1.7}
+    /* BOOKING STRIP */
+    .book-strip{background:var(--gold);padding:3.5rem 2rem;text-align:center;position:relative;z-index:1}
+    .book-strip h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--black);letter-spacing:.03em;margin-bottom:.5rem}
+    .book-strip p{color:rgba(0,0,0,.65);font-size:.97rem;max-width:420px;margin:0 auto 1.75rem;line-height:1.7}
+    .btn-dark{background:var(--black);color:var(--white)}
+    .btn-dark:hover{background:#222;transform:translateY(-2px);color:var(--white)}
 
-    footer{background:var(--charcoal);border-top:1px solid rgba(33,57,173,.15);padding:2.5rem 2rem;position:relative;z-index:1}
+    footer{background:var(--charcoal);border-top:1px solid rgba(200,200,200,.08);padding:2.5rem 2rem;position:relative;z-index:1}
     .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:center}
-    .footer-logo-k{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--gold);letter-spacing:.04em}
-    .footer-logo-rest{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--chrome-lt);letter-spacing:.04em}
     .footer-logo p{font-size:.78rem;color:var(--gray);margin-top:.2rem}
     .footer-links{display:flex;flex-direction:column;gap:.4rem}
-    .footer-links a{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);transition:color .2s}
+    .footer-links a{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
     .footer-links a:hover{color:var(--gold)}
     .footer-right{text-align:right}
-    .footer-right a{font-size:.9rem;color:var(--blue-lt);font-weight:600}
-    .footer-right a:hover{color:var(--gold)}
-    .footer-right p{font-size:.78rem;color:var(--gray);margin-top:.25rem}
-    .footer-copy{font-size:.7rem;color:rgba(90,96,128,.45);margin-top:.35rem}
-
+    .footer-right a{font-size:.9rem;color:var(--gold);font-weight:600}
+    .footer-copy{font-size:.7rem;color:rgba(102,102,102,.5);margin-top:.4rem}
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
-
     @media(max-width:768px){
       .menu-toggle{display:flex}nav{display:none;width:100%}
-      nav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--ink);border-top:1px solid rgba(33,57,173,.2);padding:1rem}
+      nav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--ink);border-top:1px solid rgba(200,200,200,.08);padding:1rem}
       nav.open ul{flex-direction:column}nav.open ul a{display:block;padding:.65rem 1rem}
       .header-inner{position:relative;flex-wrap:wrap}
       .service-block,.service-block.flip{grid-template-columns:1fr;direction:ltr;gap:2rem}
@@ -174,24 +126,18 @@
 
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track">
-    <span>Fresh Cuts</span><span>Fades</span><span>Line Ups</span><span>Beards</span><span>Tapers</span><span>Katy TX</span><span>Walk-Ins Welcome</span><span>@kezdabarber</span><span>Fresh Cuts</span><span>Fades</span><span>Line Ups</span><span>Beards</span><span>Tapers</span><span>Katy TX</span><span>Walk-Ins Welcome</span><span>@kezdabarber</span>
+    <span>Fresh Cuts</span><span>Fades</span><span>Line Ups</span><span>Beards</span><span>Tapers</span><span>Houston TX</span><span>Walk-Ins Welcome</span><span>Vaescutz</span><span>Fresh Cuts</span><span>Fades</span><span>Line Ups</span><span>Beards</span><span>Tapers</span><span>Houston TX</span><span>Walk-Ins Welcome</span><span>Vaescutz</span>
   </div>
 </div>
 
 <header>
   <div class="header-inner">
-    <a href="index.html" class="logo-wrap">
-      <span class="logo-k">K</span><span class="logo-rest">EZDA</span>
-      <span class="logo-tag">The Barber · Katy, TX</span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="logo-wrap"><span class="logo-v">V</span><span class="logo-rest">AESCUTZ</span><span class="logo-tag">Houston, TX</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <nav id="mainNav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="index.html#reviews">Reviews</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="contact.html" class="nav-book">Book Now</a></li>
       </ul>
@@ -201,352 +147,242 @@
 
 <section class="page-hero">
   <p class="breadcrumb"><a href="index.html">Home</a> / Services</p>
-  <h1>The <span>Services</span></h1>
-  <p>Every cut handled with precision. No rush, no shortcuts — just clean work every time.</p>
+  <h1>Our <span>Services</span></h1>
+  <p>Every cut is different. Every client gets the same precision. Here's what we do.</p>
 </section>
 
 <main class="services-page">
 
+  <!-- SERVICE 1: FADE -->
   <div class="service-block reveal" id="fade">
     <div>
-      <p class="svc-eyebrow">Service 01</p>
+      <span class="svc-eyebrow">Service 01</span>
       <h2 class="svc-h2">The <span>Fade</span></h2>
-      <p class="svc-p">Low, mid, high, bald — the fade is the foundation. Każdy fade jest precyzyjnie dostosowany do kształtu głowy i preferencji stylu, ensuring a natural blend from skin to length.</p>
-      <p class="svc-p">Whether you want something subtle for the office or a clean bald fade for the weekend, we dial it in every time.</p>
+      <p class="svc-p">Houston's most requested cut, done right. We blend low, mid, high, or skin fades with the kind of smoothness that makes people ask who cut your hair.</p>
+      <p class="svc-p">Each fade is tailored to your head shape and your style preference — nothing cookie-cutter about it.</p>
       <ul class="svc-includes">
-        <li>Low, mid, high, and bald fade options</li>
-        <li>Skin-perfect blending and transitions</li>
-        <li>Customized to head shape and hair texture</li>
-        <li>Finished with sharp line and neck cleanup</li>
+        <li>Low, mid, high, or skin fade</li>
+        <li>Blended with clippers and scissors</li>
+        <li>Paired with any cut style on top</li>
+        <li>Finished with a clean line-up</li>
       </ul>
-      <a href="contact.html" class="svc-cta">Book This Service →</a>
+      <a href="contact.html" class="svc-cta">Book a Fade →</a>
     </div>
     <div class="photo-grid three">
-      <div class="photo-slot photo-main"><span class="ps-icon">✂️</span><span class="ps-label">Add Fade Before/After</span><span class="ps-tag">Fade</span></div>
-      <div class="photo-slot"><span class="ps-icon">💈</span><span class="ps-label">Low Fade</span></div>
-      <div class="photo-slot"><span class="ps-icon">💈</span><span class="ps-label">Bald Fade</span></div>
+      <!--
+        FADE PHOTOS — Replace filenames:
+        FADE-PHOTO-1.jpg = wide top (before/after or finished look)
+        FADE-PHOTO-2.jpg & FADE-PHOTO-3.jpg = smaller detail shots
+      -->
+      <div class="photo-slot photo-main">
+        <img src="FADE-PHOTO-1.jpg" alt="Fade" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">💈</span><span class="ps-label">Replace FADE-PHOTO-1.jpg — finished fade (wide)</span>
+        <span class="ps-tag">Fade</span>
+      </div>
+      <div class="photo-slot">
+        <img src="FADE-PHOTO-2.jpg" alt="Fade detail" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">✂️</span><span class="ps-label">Replace FADE-PHOTO-2.jpg</span>
+      </div>
+      <div class="photo-slot">
+        <img src="FADE-PHOTO-3.jpg" alt="Low fade" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">〰️</span><span class="ps-label">Replace FADE-PHOTO-3.jpg</span>
+      </div>
     </div>
   </div>
 
-  <div class="service-block flip reveal" id="lineup">
+  <!-- SERVICE 2: HAIRCUT -->
+  <div class="service-block flip reveal" id="haircut">
     <div>
-      <p class="svc-eyebrow">Service 02</p>
-      <h2 class="svc-h2">Line <span>Up</span></h2>
-      <p class="svc-p">Crisp edges, sharp corners, straight hairlines — the line up is what separates a cut from a statement. Detail work that makes everything look intentional.</p>
+      <span class="svc-eyebrow">Service 02</span>
+      <h2 class="svc-h2">Hair<span>cut</span></h2>
+      <p class="svc-p">Whether you want something classic or something that's all your own — we make it happen. Every cut starts with a conversation about what you want and ends with exactly that.</p>
       <ul class="svc-includes">
-        <li>Hairline definition and edge cleanup</li>
-        <li>Corner shaping — rounded or square</li>
-        <li>Temple and sideburn detailing</li>
-        <li>Available as add-on or standalone service</li>
+        <li>Classic cuts, modern styles, and everything in between</li>
+        <li>Scissor and clipper work</li>
+        <li>Textured or structured finishes</li>
+        <li>Includes consultation and styling</li>
       </ul>
-      <a href="contact.html" class="svc-cta">Book This Service →</a>
+      <a href="contact.html" class="svc-cta">Book a Cut →</a>
     </div>
     <div class="photo-grid">
-      <div class="photo-slot" style="min-height:230px"><span class="ps-icon">📐</span><span class="ps-label">Line Up Photo</span><span class="ps-tag">Line Up</span></div>
-      <div class="photo-slot" style="min-height:230px"><span class="ps-icon">✂️</span><span class="ps-label">Edge Detail</span></div>
-      <div class="photo-slot" style="min-height:160px"><span class="ps-icon">💈</span><span class="ps-label">Before</span></div>
-      <div class="photo-slot" style="min-height:160px"><span class="ps-icon">💈</span><span class="ps-label">After</span></div>
+      <!--
+        HAIRCUT PHOTOS — Replace HAIRCUT-PHOTO-1.jpg & HAIRCUT-PHOTO-2.jpg
+      -->
+      <div class="photo-slot" style="min-height:240px">
+        <img src="HAIRCUT-PHOTO-1.jpg" alt="Haircut" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">✂️</span><span class="ps-label">Replace HAIRCUT-PHOTO-1.jpg</span>
+        <span class="ps-tag">Before</span>
+      </div>
+      <div class="photo-slot" style="min-height:240px">
+        <img src="HAIRCUT-PHOTO-2.jpg" alt="After cut" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">💈</span><span class="ps-label">Replace HAIRCUT-PHOTO-2.jpg</span>
+        <span class="ps-tag">After</span>
+      </div>
     </div>
   </div>
 
-  <div class="service-block reveal" id="beard">
+  <!-- SERVICE 3: LINE-UP -->
+  <div class="service-block reveal" id="lineup">
     <div>
-      <p class="svc-eyebrow">Service 03</p>
-      <h2 class="svc-h2">Beard <span>Work</span></h2>
-      <p class="svc-p">From a light cleanup to a full sculpt — we handle every beard style. Shaping, lining, and detailing that makes your beard look intentional and well-kept.</p>
+      <span class="svc-eyebrow">Service 03</span>
+      <h2 class="svc-h2"><span>Line</span>-Up</h2>
+      <p class="svc-p">A crisp line-up can take a 7 to a 10 instantly. We razor-shape the hairline, temples, and forehead to give every cut that finished, clean look that holds up.</p>
       <ul class="svc-includes">
-        <li>Full beard shaping and sculpting</li>
-        <li>Neck and cheek line cleanup</li>
-        <li>Light trim and maintenance</li>
-        <li>Mustache detailing</li>
-        <li>Available with or without a cut</li>
+        <li>Hairline and forehead edging</li>
+        <li>Temple and sideburn shaping</li>
+        <li>Hot towel and straight razor finish</li>
+        <li>Add-on to any service or standalone</li>
       </ul>
-      <a href="contact.html" class="svc-cta">Book This Service →</a>
+      <a href="contact.html" class="svc-cta">Book a Line-Up →</a>
     </div>
     <div class="photo-grid three">
-      <div class="photo-slot photo-main"><span class="ps-icon">🪒</span><span class="ps-label">Beard Before/After</span><span class="ps-tag">Beard</span></div>
-      <div class="photo-slot"><span class="ps-icon">🪒</span><span class="ps-label">Beard Sculpt</span></div>
-      <div class="photo-slot"><span class="ps-icon">🪒</span><span class="ps-label">Cleanup Detail</span></div>
+      <!--
+        LINE-UP PHOTOS — Replace LINEUP-PHOTO-1.jpg / LINEUP-PHOTO-2.jpg / LINEUP-PHOTO-3.jpg
+      -->
+      <div class="photo-slot photo-main">
+        <img src="LINEUP-PHOTO-1.jpg" alt="Line-up" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">〰️</span><span class="ps-label">Replace LINEUP-PHOTO-1.jpg — clean line-up (wide)</span>
+        <span class="ps-tag">Line-Up</span>
+      </div>
+      <div class="photo-slot">
+        <img src="LINEUP-PHOTO-2.jpg" alt="Razor edge" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">🪒</span><span class="ps-label">Replace LINEUP-PHOTO-2.jpg</span>
+      </div>
+      <div class="photo-slot">
+        <img src="LINEUP-PHOTO-3.jpg" alt="Finished edges" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">✂️</span><span class="ps-label">Replace LINEUP-PHOTO-3.jpg</span>
+      </div>
     </div>
   </div>
 
-  <div class="service-block flip reveal" id="taper">
+  <!-- SERVICE 4: BEARD -->
+  <div class="service-block flip reveal" id="beard">
     <div>
-      <p class="svc-eyebrow">Service 04</p>
-      <h2 class="svc-h2">The <span>Taper</span></h2>
-      <p class="svc-p">A classic taper with modern precision. Clean necklines, tight sides, and a sharp finish that works for any setting — from the boardroom to the block.</p>
+      <span class="svc-eyebrow">Service 04</span>
+      <h2 class="svc-h2">Beard <span>Trim</span></h2>
+      <p class="svc-p">Your beard is part of the look. We shape, line, and clean it up to complement your cut and your face structure. Walk out feeling complete.</p>
       <ul class="svc-includes">
-        <li>Low, medium, and high taper options</li>
-        <li>Blended sides and back</li>
-        <li>Clean neckline shaping</li>
-        <li>Pairs well with any length on top</li>
+        <li>Beard shaping and sculpting</li>
+        <li>Neck and cheek line clean-up</li>
+        <li>Hot towel treatment available</li>
+        <li>Standalone or add-on to any cut</li>
       </ul>
-      <a href="contact.html" class="svc-cta">Book This Service →</a>
+      <a href="contact.html" class="svc-cta">Book a Beard Trim →</a>
     </div>
     <div class="photo-grid">
-      <div class="photo-slot" style="min-height:230px;grid-column:span 2"><span class="ps-icon">💈</span><span class="ps-label">Taper Photo</span><span class="ps-tag">Taper</span></div>
-      <div class="photo-slot"><span class="ps-icon">✂️</span><span class="ps-label">Side View</span></div>
-      <div class="photo-slot"><span class="ps-icon">✂️</span><span class="ps-label">Back Detail</span></div>
+      <!--
+        BEARD PHOTOS — Replace BEARD-PHOTO-1.jpg & BEARD-PHOTO-2.jpg
+      -->
+      <div class="photo-slot" style="min-height:240px">
+        <img src="BEARD-PHOTO-1.jpg" alt="Beard trim" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">🧔</span><span class="ps-label">Replace BEARD-PHOTO-1.jpg</span>
+      </div>
+      <div class="photo-slot" style="min-height:240px">
+        <img src="BEARD-PHOTO-2.jpg" alt="Clean beard" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">🪒</span><span class="ps-label">Replace BEARD-PHOTO-2.jpg</span>
+      </div>
     </div>
   </div>
 
+  <!-- SERVICE 5: KIDS -->
   <div class="service-block reveal" id="kids">
     <div>
-      <p class="svc-eyebrow">Service 05</p>
+      <span class="svc-eyebrow">Service 05</span>
       <h2 class="svc-h2">Kids <span>Cut</span></h2>
-      <p class="svc-p">Patient, precise cuts for the young ones. We take our time, make it comfortable, and deliver clean results every time — no stress for them or you.</p>
+      <p class="svc-p">Bring the little ones in. We're patient, precise, and know how to keep kids comfortable in the chair. Same quality, same attention — just a little more fun.</p>
       <ul class="svc-includes">
-        <li>For ages 12 and under</li>
-        <li>Fades, tapers, and regular cuts</li>
-        <li>Patient and calm environment</li>
-        <li>Same precision as adult cuts</li>
+        <li>All ages welcome</li>
+        <li>Patient and kid-friendly approach</li>
+        <li>Any style or cut they want</li>
+        <li>First cut? We've got them.</li>
       </ul>
-      <a href="contact.html" class="svc-cta">Book This Service →</a>
+      <a href="contact.html" class="svc-cta">Book a Kids Cut →</a>
     </div>
     <div class="photo-grid">
-      <div class="photo-slot" style="min-height:230px;grid-column:span 2"><span class="ps-icon">👦</span><span class="ps-label">Kids Cut Photo</span><span class="ps-tag">Kids</span></div>
-      <div class="photo-slot"><span class="ps-icon">✂️</span><span class="ps-label">Before</span></div>
-      <div class="photo-slot"><span class="ps-icon">✂️</span><span class="ps-label">After</span></div>
-    </div>
-  </div>
-
-  <div class="service-block flip reveal" id="designs">
-    <div>
-      <p class="svc-eyebrow">Service 06</p>
-      <h2 class="svc-h2">Hair <span>Designs</span></h2>
-      <p class="svc-p">Custom razor designs and hair art for those who want their cut to say something. From simple parts to intricate patterns — we draw it clean.</p>
-      <ul class="svc-includes">
-        <li>Custom part lines and geometric designs</li>
-        <li>Razor art and intricate patterns</li>
-        <li>Logo and text designs available</li>
-        <li>Works best on short to medium hair</li>
-      </ul>
-      <a href="contact.html" class="svc-cta">Book This Service →</a>
-    </div>
-    <div class="photo-grid three">
-      <div class="photo-slot photo-main"><span class="ps-icon">⚡</span><span class="ps-label">Add Design Photo</span><span class="ps-tag">Design</span></div>
-      <div class="photo-slot"><span class="ps-icon">⚡</span><span class="ps-label">Design Detail</span></div>
-      <div class="photo-slot"><span class="ps-icon">⚡</span><span class="ps-label">Design Close-Up</span></div>
+      <!--
+        KIDS PHOTOS — Replace KIDS-PHOTO-1.jpg & KIDS-PHOTO-2.jpg
+      -->
+      <div class="photo-slot" style="min-height:220px;grid-column:span 2">
+        <img src="KIDS-PHOTO-1.jpg" alt="Kids cut" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+        <span class="ps-icon">👶</span><span class="ps-label">Replace KIDS-PHOTO-1.jpg — kids cut (wide)</span>
+        <span class="ps-tag">Kids</span>
+      </div>
     </div>
   </div>
 
   <!-- PRICING -->
-  <!-- BOOKING MENU -->
-  <div class="booking-section reveal" id="booking">
-    <h2>Book a <span>Service</span></h2>
-    <p class="intro">Select a service below and pay your deposit to secure your appointment. Deposits apply toward your total.</p>
-    <div class="cancel-notice">⚠ 15 min late = cancellation — deposit is forfeited</div>
-
-    <div class="booking-list">
-
-      <!-- Mens Haircut -->
-      <div class="booking-row">
-        <div class="bk-info">
-          <div class="bk-name">Men's Haircut</div>
-          <div class="bk-sub">Full cut, fade, or taper with line up. <span class="cancel-tag">15 min late = cancellation.</span></div>
-        </div>
-        <div class="bk-duration"><strong>1H</strong>Duration</div>
-        <div class="bk-price">$35<span>Deposit</span></div>
-        <div class="bk-btns">
-          <button class="bk-btn-book" onclick="toggleDrop(this,'Men\'s Haircut','$35.00','35.00')">Book <span class="chev">▼</span></button>
-          <div class="bk-dropdown">
-            <a href="#" class="dd-paypal" onclick="choosePayPal(event,'35.00')"><span class="dd-logo">🅿</span> PayPal</a>
-            <a href="#" class="dd-stripe" onclick="chooseStripe(event)"><span class="dd-logo">💳</span> Card / Stripe</a>
-          </div>
-        </div>
+  <div class="pricing-section reveal">
+    <h2>Simple <span>Pricing</span></h2>
+    <p>No surprises. Update the prices below to match your actual rates.</p>
+    <div class="pricing-grid">
+      <div class="price-item">
+        <div class="price-name">Haircut</div>
+        <div class="price-desc">Classic or custom cut, any style</div>
+        <div class="price-tag">$-- <span>& up</span></div>
       </div>
-
-      <!-- Kids Haircut -->
-      <div class="booking-row">
-        <div class="bk-info">
-          <div class="bk-name">Kids Haircut</div>
-          <div class="bk-sub">Ages 12 &amp; under. Patient, precise cuts. <span class="cancel-tag">15 min late = cancellation.</span></div>
-        </div>
-        <div class="bk-duration"><strong>45M</strong>Duration</div>
-        <div class="bk-price">$25<span>Deposit</span></div>
-        <div class="bk-btns">
-          <button class="bk-btn-book" onclick="toggleDrop(this,'Kids Haircut','$25.00','25.00')">Book <span class="chev">▼</span></button>
-          <div class="bk-dropdown">
-            <a href="#" class="dd-paypal" onclick="choosePayPal(event,'25.00')"><span class="dd-logo">🅿</span> PayPal</a>
-            <a href="#" class="dd-stripe" onclick="chooseStripe(event)"><span class="dd-logo">💳</span> Card / Stripe</a>
-          </div>
-        </div>
+      <div class="price-item">
+        <div class="price-name">Fade</div>
+        <div class="price-desc">Low, mid, high, or skin fade</div>
+        <div class="price-tag">$-- <span>& up</span></div>
       </div>
-
-      <!-- Line Up -->
-      <div class="booking-row">
-        <div class="bk-info">
-          <div class="bk-name">Line-Up</div>
-          <div class="bk-sub">Crisp edges, sharp corners, clean hairline. <span class="cancel-tag">15 min late = cancellation.</span></div>
-        </div>
-        <div class="bk-duration"><strong>35M</strong>Duration</div>
-        <div class="bk-price">$25<span>Deposit</span></div>
-        <div class="bk-btns">
-          <button class="bk-btn-book" onclick="toggleDrop(this,'Line-Up','$25.00','25.00')">Book <span class="chev">▼</span></button>
-          <div class="bk-dropdown">
-            <a href="#" class="dd-paypal" onclick="choosePayPal(event,'25.00')"><span class="dd-logo">🅿</span> PayPal</a>
-            <a href="#" class="dd-stripe" onclick="chooseStripe(event)"><span class="dd-logo">💳</span> Card / Stripe</a>
-          </div>
-        </div>
+      <div class="price-item">
+        <div class="price-name">Line-Up</div>
+        <div class="price-desc">Razor edges, hairline and temples</div>
+        <div class="price-tag">$-- <span>add-on</span></div>
       </div>
-
-      <!-- Beard Shape Up -->
-      <div class="booking-row">
-        <div class="bk-info">
-          <div class="bk-name">Beard Shape Up</div>
-          <div class="bk-sub">Full shaping, lining, and detailing. <span class="cancel-tag">15 min late = cancellation.</span></div>
-        </div>
-        <div class="bk-duration"><strong>30M</strong>Duration</div>
-        <div class="bk-price">$25<span>Deposit</span></div>
-        <div class="bk-btns">
-          <button class="bk-btn-book" onclick="toggleDrop(this,'Beard Shape Up','$25.00','25.00')">Book <span class="chev">▼</span></button>
-          <div class="bk-dropdown">
-            <a href="#" class="dd-paypal" onclick="choosePayPal(event,'25.00')"><span class="dd-logo">🅿</span> PayPal</a>
-            <a href="#" class="dd-stripe" onclick="chooseStripe(event)"><span class="dd-logo">💳</span> Card / Stripe</a>
-          </div>
-        </div>
+      <div class="price-item">
+        <div class="price-name">Beard Trim</div>
+        <div class="price-desc">Shape, line, and clean up</div>
+        <div class="price-tag">$-- <span>& up</span></div>
       </div>
-
-      <!-- Kids Haircut + Design -->
-      <div class="booking-row">
-        <div class="bk-info">
-          <div class="bk-name">Kids Haircut + Design</div>
-          <div class="bk-sub">Kids cut with custom razor design included. <span class="cancel-tag">15 min late = cancellation.</span></div>
-        </div>
-        <div class="bk-duration"><strong>50M</strong>Duration</div>
-        <div class="bk-price">$30<span>Deposit</span></div>
-        <div class="bk-btns">
-          <button class="bk-btn-book" onclick="toggleDrop(this,'Kids Haircut + Design','$30.00','30.00')">Book <span class="chev">▼</span></button>
-          <div class="bk-dropdown">
-            <a href="#" class="dd-paypal" onclick="choosePayPal(event,'30.00')"><span class="dd-logo">🅿</span> PayPal</a>
-            <a href="#" class="dd-stripe" onclick="chooseStripe(event)"><span class="dd-logo">💳</span> Card / Stripe</a>
-          </div>
-        </div>
+      <div class="price-item">
+        <div class="price-name">Taper</div>
+        <div class="price-desc">Gradual, clean taper from top to sides</div>
+        <div class="price-tag">$-- <span>& up</span></div>
       </div>
-
-    </div>
-  </div>
-
-  <!-- PAYMENT MODAL -->
-  <div class="modal-overlay" id="payModal" onclick="closeModalOutside(event)">
-    <div class="modal">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <h3>Secure Your Slot</h3>
-      <div class="modal-service" id="modalService">Men's Haircut</div>
-      <div class="modal-amount" id="modalAmount">$35.00</div>
-      <p class="modal-note">
-        This deposit secures your appointment and applies toward your total. <strong>Arriving 15+ minutes late forfeits your deposit and cancels your booking.</strong> Contact @kezdabarber to reschedule if needed.
-      </p>
-      <div class="pay-btns">
-        <a id="paypalBtn" href="#" target="_blank" rel="noopener" class="pay-btn-full pay-btn-paypal" onclick="handlePayPal(event)">
-          🅿 &nbsp;Pay with PayPal
-        </a>
-        <div class="pay-divider"><span>or</span></div>
-        <a id="stripeBtn" href="#" target="_blank" rel="noopener" class="pay-btn-full pay-btn-stripe" onclick="handleStripe(event)">
-          💳 &nbsp;Pay with Card (Stripe)
-        </a>
+      <div class="price-item">
+        <div class="price-name">Kids Cut</div>
+        <div class="price-desc">Any style, all ages</div>
+        <div class="price-tag">$-- <span>& up</span></div>
       </div>
-      <p class="pay-security">🔒 Payments are processed securely — we never store your card info</p>
     </div>
   </div>
 
 </main>
 
-<div class="book-strip">
-  <h2>Ready to <span>Book?</span></h2>
-  <p>Walk-ins welcome. Appointments get priority. Located at 5618 Armillary Dr, Katy TX 77449.</p>
-  <a href="contact.html" class="btn btn-gold">Schedule Your Cut →</a>
-</div>
+<section class="book-strip">
+  <h2>Ready to Book?</h2>
+  <p>Walk in or hit us up ahead of time. We'll get you right.</p>
+  <a href="contact.html" class="btn btn-dark">Book My Cut →</a>
+</section>
 
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <div><span class="footer-logo-k">K</span><span class="footer-logo-rest">EZDA</span></div>
-      <p>The Barber · Katy, TX 77449</p>
+      <div class="logo-wrap"><span class="logo-v">V</span><span class="logo-rest">AESCUTZ</span></div>
+      <p>Houston Barbershop</p>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="contact.html">Book Now</a>
+      <a href="contact.html">Contact &amp; Book</a>
     </div>
     <div class="footer-right">
-      <a href="https://www.instagram.com/kezdabarber" target="_blank" rel="noopener">@kezdabarber</a>
-      <p>5618 Armillary Dr, Katy TX 77449</p>
-      <p class="footer-copy">&copy; 2026 KezdaBarber · All Rights Reserved</p>
+      <a href="contact.html">Book Now →</a>
+      <p class="footer-copy">© 2026 Vaescutz · Houston, TX · All Rights Reserved</p>
     </div>
   </div>
 </footer>
 
 <script>
-  // ── NAV ──
   const toggle = document.getElementById('menuToggle');
   const nav = document.getElementById('mainNav');
   toggle.addEventListener('click', () => nav.classList.toggle('open'));
-
-  // ── SCROLL REVEAL ──
   const reveals = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
-  }, {threshold:.1});
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
   reveals.forEach(r => obs.observe(r));
-
-  // ── PAYMENT CONFIG — replace with your real links ──
-  const PAYPAL_LINK = 'https://www.paypal.com/paypalme/kezdabarber'; // e.g. paypal.me/yourname
-  const STRIPE_LINK = 'https://buy.stripe.com/YOUR_STRIPE_LINK';     // Stripe Dashboard → Payment Links
-
-  // ── DROPDOWN TOGGLE ──
-  function toggleDrop(btn, service, displayPrice, amount) {
-    // close any other open dropdowns first
-    document.querySelectorAll('.bk-dropdown.open').forEach(d => {
-      if(d !== btn.nextElementSibling) {
-        d.classList.remove('open');
-        d.previousElementSibling.classList.remove('active');
-      }
-    });
-    const dd = btn.nextElementSibling;
-    const isOpen = dd.classList.toggle('open');
-    btn.classList.toggle('active', isOpen);
-    // store on the dropdown for the choice handlers
-    dd.dataset.service = service;
-    dd.dataset.price = displayPrice;
-    dd.dataset.amount = amount;
-  }
-
-  // Close dropdowns when clicking elsewhere
-  document.addEventListener('click', e => {
-    if(!e.target.closest('.bk-btns')) {
-      document.querySelectorAll('.bk-dropdown.open').forEach(d => {
-        d.classList.remove('open');
-        d.previousElementSibling.classList.remove('active');
-      });
-    }
-  });
-
-  function choosePayPal(e, amount) {
-    e.preventDefault();
-    const url = PAYPAL_LINK.replace(/\/$/, '') + '/' + amount;
-    window.open(url, '_blank', 'noopener');
-    e.target.closest('.bk-dropdown').classList.remove('open');
-    e.target.closest('.bk-dropdown').previousElementSibling.classList.remove('active');
-  }
-
-  function chooseStripe(e) {
-    e.preventDefault();
-    window.open(STRIPE_LINK, '_blank', 'noopener');
-    e.target.closest('.bk-dropdown').classList.remove('open');
-    e.target.closest('.bk-dropdown').previousElementSibling.classList.remove('active');
-  }
-
-  // ── MODAL (kept for cancel notice display) ──
-  function closeModal() {
-    document.getElementById('payModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function closeModalOutside(e) {
-    if(e.target === document.getElementById('payModal')) closeModal();
-  }
-  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
 </script>
 </body>
 </html>
